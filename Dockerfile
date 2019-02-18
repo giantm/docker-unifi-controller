@@ -1,10 +1,11 @@
 FROM ubuntu:17.10
-MAINTAINER giantm@me.com
+MAINTAINER matt@giant.family
 
 ARG BUILD_DATE
-ARG UNIFI_VERSION=5.10.19-113b57454f
+ARG SHORT_VERS=5.10.19
+ARG UNIFI_VERSION=${SHORT_VERS}-113b57454f
 
-LABEL build_version="mattgiant version:- ${UNIFI_VERSION} Build-date:- ${BUILD_DATE}"
+LABEL build_version="mattgiant version:- ${SHORT_VERS} Build-date:- ${BUILD_DATE}"
 
 # SET ENVIROMENT VARIABLES
 ENV DEBIAN_FRONTEND noninteractive
